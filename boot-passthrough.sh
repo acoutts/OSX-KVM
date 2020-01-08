@@ -13,6 +13,6 @@ qemu-system-x86_64 -enable-kvm -m 3072 -cpu Penryn,kvm=on,vendor=GenuineIntel,+i
 	  -drive if=pflash,format=raw,file=OVMF_VARS.fd \
 	  -smbios type=2 \
 	  -device ide-drive,bus=ide.2,drive=MacHDD \
-	  -drive id=MacHDD,if=none,file=./mac_hdd.img \
+	  -drive id=MacHDD,if=none,file=./mac_hdd_ng.img \
 	  -netdev tap,id=net0,ifname=tap0,script=no,downscript=no -device e1000-82545em,netdev=net0,id=net0,mac=52:54:00:c9:18:27 \
 	  -monitor stdio
